@@ -71,8 +71,8 @@ def remove_stop(output, with_flag):
     res.save(output)
 def main():
     #不带词性
-    remove_stop('remove_stop_words_with_flag.xlsx', 1)
+    #remove_stop('remove_stop_words_with_flag.xlsx', 1)
     #带词性
-    #remove_stop('remove_stop_words_without_flag.xlsx', 0)
+    remove_stop('remove_stop_words_without_flag.xlsx', 0)
 if __name__ == "__main__":
     main()
