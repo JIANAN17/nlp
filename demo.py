@@ -37,7 +37,7 @@ def dump_stop(stop):
 def dump(word):
     print u''.join(word)
 
-def remove_stop_and_get_flag(sentence, stop, flag):
+def remove_stop_and_get_flag(sentence, stop, with_flag):
     final = u''
     final_with_flag = u''
     segs = pseg.cut(sentence)
@@ -49,11 +49,11 @@ def remove_stop_and_get_flag(sentence, stop, flag):
     #print "final is ", final
     #print "final with flag is: ", final_with_flag
     #return final_with_flag
-    if flag:
-        return final_with_flag
-    else:
+    if with_flag == 0:
         return final
-
+    else:
+        return final_with_flag
+    
 def remove_stop(output, with_flag):
     stop_words = load_stop_word()
     book = openpyxl.load_workbook('word_cut_results.xlsx')
