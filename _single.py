@@ -21,12 +21,12 @@ print sys.argv[1],sys.argv[2],sys.argv[3]
 start = int(sys.argv[1])
 end  = int(sys.argv[2])
 
+
 print start, end
-if end >= len(comments):
-    end = len(comments) - 1
+
 fname = sys.argv[3]
 
-f = open(fname, "w")
+f = open(fname, "w") #, buffering=0)
 for i in range(start, end):
     output = str(setiment_score(comments[i])) + '\n'
     f.write(output)
