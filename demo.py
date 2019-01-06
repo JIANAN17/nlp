@@ -67,8 +67,14 @@ def remove_stop(output, with_flag):
                 continue
             ret =  remove_stop_and_get_flag(cell.value, stop_words, with_flag)
             res_sheet.append([ret])
-
+    
     res.save(output)
+
+def get_num_row(fname)
+    book = openpyxl.load_workbook(fname)
+    sheet = book.active 
+    return sheet.max_row
+    
 def main():
     #不带词性
     #remove_stop('remove_stop_words_with_flag.xlsx', 1)
