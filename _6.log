@@ -2,3 +2,7 @@ Building prefix dict from the default dictionary ...
 Loading model from cache /tmp/jieba.cache
 Loading model cost 0.374 seconds.
 Prefix dict has been built succesfully.
+load done
+12642 14749 _6.txt
+12642 14749
+_6.txt  done

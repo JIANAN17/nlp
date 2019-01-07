@@ -8,12 +8,15 @@ book = openpyxl.load_workbook('./weibo_data_v0.xlsx')
 sheet = book.active
 
 comments = []
+i = 0
 for row in sheet.iter_rows(min_row=1, min_col=6, max_row=sheet.max_row,  max_col=6):
     for cell in row:
+        i = i + 1
         if not cell.value:
+            print i
             continue 
         comments.append(cell.value)
-
+'''
 print 'load done'
 
 print sys.argv[1],sys.argv[2],sys.argv[3]
@@ -34,3 +37,4 @@ f.close()
 
 
 print sys.argv[3], ' done'
+'''

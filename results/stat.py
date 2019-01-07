@@ -23,10 +23,10 @@ def parse_file(fn):
         else:
             __zero = __zero + 1
     f.close()
-    print __positive, __negative, __zero, __positive+__negative+__zero
+    #print __positive, __negative, __zero, __positive+__negative+__zero
 
-for i in range(0,8):
-    parse_file('_' + str(i)+'.txt')
+parse_file(sys.argv[1])
 
-print '+, -, 0'
-print __positive, __negative, __zero, __positive+__negative+__zero
+print '\t+, -, 0'
+print '\t',__positive, __negative, __zero
+
